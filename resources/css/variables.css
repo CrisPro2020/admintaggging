@@ -1,0 +1,22 @@
+/*=============== VARIABLES CSS ===============*/
+
+:root {
+    --nav-width: 82px;
+    --nav-height: 60px;
+    /* Colores */
+    --primary-color: #36276E;
+    --primary-color-20: rgba(54, 39, 110, 0.2);
+    --primary-color-3: #7B57FA;
+    --primary-color-3-30: rgba(123, 87, 250, 0.3);
+    --secondary-color: #FCDD1E;
+    --white-color: #FFF;
+    --black-color: #2D2D2D;
+    --bg-color-opacity: #EDEDED;
+    /* Tipografia */
+    --sx-small-font-size: 0.625rem;
+    --s-small-font-size: 0.75rem;
+    --small-font-size: 0.875rem;
+    --normal-font-size: 1rem;
+    --large-font-size: 1.125rem;
+    --big-font-size: 2.125rem;
+}

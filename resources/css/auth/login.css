@@ -1,0 +1,55 @@
+.form-login {
+    @apply relative w-full h-screen flex justify-center items-center;
+    min-height: 40rem;
+    background: linear-gradient(rgba(54, 39, 110, 0.9), rgba(54, 39, 110, 0.9)), url("/img/bg-login.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.form-login .login img {
+    @apply w-full;
+    max-width: 200px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+}
+
+.form-login .login form {
+    @apply w-full bg-white;
+    max-width: 340px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.1);
+    padding: 38px 20px 48px 20px;
+}
+
+.form-login .login form .form-group {
+    @apply mb-9;
+}
+
+.form-login .login form .form-group .label {
+    @apply text-tiny font-bold text-primary mb-2;
+}
+
+.form-login .login form .form-group .input {
+    @apply block relative bg-white py-4 px-6 text-tiny mb-4;
+    border-radius: 5px;
+    border: 1px solid #BABABA;
+    transition: all 0.3s ease;
+}
+
+.form-login .login form .form-group .input:focus {
+    outline: none;
+    border: 1px solid var(--primary-color-3);
+}
+
+.form-login .login form .remember_check {
+    @apply flex items-center;
+}
+
+.form-login .login form .remember_check .check {
+    @apply mr-5;
+}
+
+.form-login .login form .remember_check span {
+    @apply text-primary text-tiny font-medium;
+}

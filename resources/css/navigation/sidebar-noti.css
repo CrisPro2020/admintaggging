@@ -1,0 +1,110 @@
+/* Sidebar de notificaciones */
+
+.sidebar-noti {
+    @apply absolute w-full bg-white;
+    display: none;
+    top: 0;
+    z-index: 200;
+    height: calc(100% - var(--nav-height));
+    transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 640px) {
+    .sidebar-noti {
+      display: block;
+      opacity: 0;
+      visibility: hidden;
+      z-index: -100;
+      overflow: hidden;
+    }
+    .sidebar-noti.sidebar__notificaciones_activo {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+      z-index: 100;
+      overflow: auto;
+    }
+  }
+
+.sidebar-noti .bar-superior {
+    @apply fixed w-full z-50 flex flex-row bg-white items-center pr-10;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    border-bottom: 1px solid #C4C4C4;
+}
+
+.sidebar-noti .bar-superior h6 {
+    @apply py-8 w-full text-lg font-bold;
+}
+
+.sidebar-noti .bar-superior .close-noti {
+    @apply py-8 pr-4 pl-10 flex items-center text-black;
+}
+
+.sidebar-noti .bar-superior .close-noti:hover {
+    background-color: var(--bg-color-opacity);
+}
+
+.sidebar-noti .bar-superior .close-noti .bar-super-icon {
+    font-size: 24px;
+    margin-right: 16px;
+}
+
+.sidebar-noti .list-noti {
+    position: relative;
+    top: 64px;
+    padding-bottom: 64px;
+}
+
+.sidebar-noti .list-noti .noti-card {
+    @apply relative py-10 px-8 flex justify-between items-center;
+    transition: all 0.3s ease;
+}
+
+.sidebar-noti .list-noti .noti-card:hover {
+    background-color: var(--bg-color-opacity);
+}
+
+.sidebar-noti .list-noti .noti-card .photo {
+    @apply relative mr-10;
+}
+
+.sidebar-noti .list-noti .noti-card .photo > img {
+    width: 30px;
+}
+
+.sidebar-noti .list-noti .noti-card .text {
+    @apply relative text-sm;
+}
+
+.sidebar-noti .list-noti .noti-card .text .text-name {
+    @apply text-black font-medium mb-3;
+}
+
+.sidebar-noti .list-noti .noti-card .text .text-name .name {
+    @apply font-bold;
+}
+
+.sidebar-noti .list-noti .noti-card .text .text-post {
+    @apply font-bold text-primary3;
+    line-height: 20px;
+}
+
+.sidebar-noti .btn-close {
+    @apply fixed block w-full py-5 px-10 bg-white;
+    bottom: 60px;
+    border-top: 1px solid #C4C4C4;
+}
+
+.sidebar-noti .btn-close .btn-close-noti {
+    @apply block text-center text-base font-semibold p-6 bg-primary30 text-primary3;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.sidebar-noti .btn-close .btn-close-noti:hover {
+    opacity: 0.8;
+}
+
+/* Sidebar de notificaciones */

@@ -1,0 +1,50 @@
+/* Barra de navegacion inferior */
+
+.bar-inferior {
+    @apply fixed w-full bg-white flex;
+    z-index: 250;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: var(--nav-height);
+    border-top: 1px solid #C4C4C4;
+    -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (min-width: 1024px) {
+    .bar-inferior {
+      display: none;
+    }
+}
+
+.bar-inferior .bar-inf-enlace {
+    @apply w-1/5 relative flex flex-col justify-center items-center text-black;
+}
+
+.bar-inferior .bar-inf-enlace:hover {
+    background-color: var(--bg-color-opacity);
+}
+
+.bar-inferior .bar-inf-enlace.active .bi-icon {
+    color: var(--primary-color-3);
+}
+
+.bar-inferior .bar-inf-enlace.active .binf-name {
+    color: var(--primary-color-3);
+}
+
+.bar-inferior .bar-inf-enlace .binf-name {
+    @apply text-xs font-semibold;
+}
+
+.bar-inferior .bar-inf-enlace .bar-inf-icon {
+    @apply relative w-full h-10 mb-3 flex justify-center items-center;
+}
+
+.bar-inferior .bar-inf-enlace .bar-inf-icon .bi-icon {
+    position: relative;
+    font-size: 20px;
+}
+
+/* Barra de navegacion inferior */

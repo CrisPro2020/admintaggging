@@ -1,0 +1,183 @@
+/* Sidebar */
+
+.sidebar {
+    @apply fixed h-screen bg-white;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease-in-out;
+    width: var(--nav-width);
+    z-index: 200;
+    -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+}
+
+.sidebar .nav {
+    @apply relative h-full;
+}
+
+.sidebar.active {
+    width: 240px;
+}
+
+@media screen and (max-width: 1024px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+.sidebar .sidebar-head {
+    @apply relative py-8 px-10 bg-primary mx-auto;
+}
+
+.sidebar .sidebar-head .brand {
+    @apply relative overflow-hidden;
+}
+
+.sidebar .sidebar-head .brand .icono-de-tagging {
+    @apply object-cover -ml-1 transition duration-300;
+    width: 46px;
+    height: 42px;
+    opacity: 1;
+}
+  
+.sidebar .sidebar-head .brand .logo-de-tagging {
+    @apply absolute block top-3 left-3 opacity-0 transition duration-300 ease-in-out;
+    width: 130px;
+}
+
+.sidebar .sidebar-nav {
+    @apply relative flex flex-col;
+    padding: 1.875rem 0.6875rem;
+}
+
+.sidebar .sidebar-nav .nav-enlace {
+    @apply relative text-black text-tiny font-medium grid items-center bg-white transition duration-200 ease-in-out overflow-hidden;
+    padding: 15px 17px;
+    grid-template-columns: max-content max-content auto;
+    justify-items: flex-end;
+    border-radius: 5px;
+}
+
+.sidebar .sidebar-nav .nav-enlace.active {
+    background: var(--primary-color-20);
+}
+
+.sidebar .sidebar-nav .nav-enlace.active:hover {
+    background: var(--primary-color-20);
+}
+
+.sidebar .sidebar-nav .nav-enlace:hover {
+    background-color: var(--bg-color-opacity);
+}
+
+.sidebar .sidebar-nav .nav-enlace .nav-icon {
+    @apply mr-10;
+    width: 26px;
+    height: 26px;
+}
+
+.sidebar .sidebar-nav .nav-enlace span {
+    @apply mt-2 transition duration-300 opacity-100;
+}
+
+.sidebar .sidebar-nav .nav-enlace.active .nav-icon {
+    color: var(--primary-color)
+}
+
+.sidebar .sidebar-nav .nav-enlace.active span {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.sidebar .sidebar-nav .nav-enlace:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+/*======= SUBENLACES =======*/
+
+.sidebar .sidebar-nav .entradas > a {
+    @apply w-full text-black;
+    display: grid;
+    grid-template-columns: max-content max-content auto;
+    margin-bottom: 0px !important;
+}
+
+.sidebar .sidebar-nav .entradas > a.active-sub {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    font-weight: 700;
+}
+
+.sidebar .sidebar-nav .entradas > a .chevron {
+    transition: all 0.3s ease;
+    transform: rotate(0deg);
+} 
+
+.sidebar .sidebar-nav .entradas > a.active-sub .chevron {
+    transform: rotate(180deg);
+}
+
+.sidebar .sidebar-nav .entradas .sub-entradas {
+    background-color: rgba(0, 0, 0, 0.03);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 0px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    padding: 0;
+}
+
+.sidebar .sidebar-nav .entradas .sub-entradas.active-dropdown {
+    padding: 10px 0;
+    height: 156px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.sidebar .sidebar-nav .entradas .sub-entradas .sub-enlace {
+    position: relative;
+    padding: 10px 19px;
+    display: grid;
+    grid-template-columns: max-content max-content;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.sidebar .sidebar-nav .entradas .sub-entradas .sub-enlace:hover {
+    color: var(--primary-color);
+    opacity: 0.8;
+}
+
+.sidebar .sidebar-nav .entradas .sub-entradas .sub-enlace.active-sub {
+    color: var(--primary-color);
+}
+
+.sidebar .sidebar-nav .entradas .sub-entradas .sub-enlace.active-sub span {
+    font-weight: 700;
+}
+
+.sidebar .sidebar-nav .entradas .sub-entradas .sub-icon {
+    @apply mr-10;
+    font-size: 24px;
+}
+
+.sidebar .sidebar-nav .entradas .sub-entradas span {
+    @apply text-sm font-medium mt-2;
+}
+
+/*======= SUBENLACES =======*/
+
+/*======= ICONO DE TAGGING OCULTO =======*/
+.tagging__icon__oculto {
+    opacity: 0 !important;
+}
+  
+/*======= LOGO DE TAGGING WOALA =======*/
+.tagging__logo__aparecio {
+    opacity: 1 !important;
+}
+
+/* Sidebar */
